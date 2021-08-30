@@ -38,3 +38,21 @@ else if(playerInput == '3'){
 else{
     playerMove = 'nieznany ruch';
 }
+
+// wynik
+
+printMessage('Twój ruch to: ' + playerMove);
+
+if((computerMove == 'kamień' && playerMove == 'papier')||(computerMove == 'papier' && playerMove == 'nożyce')||(computerMove == 'nożyce' && playerMove == 'kamień')){
+    printMessage('Ty wygrywasz!');
+  }
+
+else if((computerMove == 'papier' && playerMove == 'kamień')||(computerMove == 'nożyce' && playerMove == 'papier')||(computerMove == 'kamień' && playerMove == 'nożyce')){
+    printMessage('Komputer wygrywa');
+}
+else if(playerMove == 'nieznany ruch'){
+    printMessage('podałeś błędną wartość');
+  }
+else{
+    printMessage('Mamy remis!');
+}
